@@ -1,0 +1,354 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9fafc;
+  color: #333;
+}
+
+header {
+  background: #0c4da1;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  background: #0c4da1;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav button:hover {
+  background: #0056b3;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  display: none;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+section.active {
+  display: block;
+}
+
+form input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #218838;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #0c4da1;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* Manual image slider styling */
+.slider {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background: #fff;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+  text-align: center;
+  padding: 10px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide p {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.controls button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.controls button:hover {
+  background: #0056b3;
+}
+
+/* HEADER */
+header {
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  margin-right: 15px;
+}
+
+header h1 {
+  font-size: 1.8em;
+  font-weight: 700;
+  flex: 1;
+  text-align: left;
+}
+
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #0056b3;
+}
+
+/* HOME PAGE */
+#home h2 {
+  font-size: 2em;
+  color: #004aad;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+/* Info Box Full Width Banner */
+.info-box {
+  background: #e6f0ff;
+  border-radius: 0;           /* optional: no rounding if you want a full banner */
+  padding: 25px 50px;         /* space inside so text doesn’t touch edges */
+  width: 100%;                /* full width of the page */
+  margin: 20px 0;             /* spacing above and below the banner */
+  box-sizing: border-box;     /* include padding in width calculation */
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.info-box p {
+  font-size: 1.25em;
+  line-height: 1.9;
+  color: #1f1f1f;
+  text-align: justify;
+  max-width: 1200px;          /* keeps text readable on very large screens */
+  margin: 0 auto;             /* center text horizontally inside full-width box */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/* Guidelines */
+.guidelines {
+  background: #f9fbff;
+  padding: 20px;
+  margin: 0 auto 30px auto;
+  border-radius: 10px;
+  max-width: 85%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.guidelines h3 {
+  text-align: center;
+  color: #004aad;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.guidelines ol {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.8;
+  padding-left: 25px;
+}
+
+.guidelines li strong {
+  color: #004aad;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+   .guidelines {
+    max-width: 95%;
+  }
+  .info-box, .guidelines {
+    max-width: 95%;
+    padding: 15px 20px;
+  }
+
+  .info-box p {
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+}
+/* About Page Section */
+.about-page {
+  background: #f0f4ff;
+  padding: 30px 20px;
+  margin-top: 30px;
+}
+
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.about-content h3 {
+  text-align: center;
+  color: #003366;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Election Blocks */
+.election-blocks {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.election-block {
+  background: #e6f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;  /* flexible and responsive */
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+
+.election-block h4 {
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.election-block ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.election-block ul li {
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 15px 10px;
+  }
+
+  .election-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .election-block {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+

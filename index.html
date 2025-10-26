@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Election Logo" class="logo">
+            <h1>State Assembly Election Portal</h1>
+        </div>
+
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('voterLogin')">Voter Login</button>
+            <button onclick="showSection('adminLogin')">Admin Login</button>
+            <button onclick="showSection('register')">Register</button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h2>Welcome to the Digital Election System</h2>
+
+        <!-- Full-width info box -->
+        <div class="info-box">
+            <p>
+                This platform is designed to ensure a transparent, secure, and efficient voting process for the
+                State Assembly Elections. Every citizen can register, verify credentials, and cast their vote
+                from the comfort of their home using this digital election portal.
+            </p>
+        </div>
+
+        <!-- Guidelines -->
+        <div class="guidelines">
+            <h3>Beginner’s Guide to Using This Portal</h3>
+            <ol>
+                <li><strong>Register:</strong> Create your account using your valid Voter ID and details.</li>
+                <li><strong>Login:</strong> Access the voter section using your credentials.</li>
+                <li><strong>Vote:</strong> Select your candidate and cast your vote securely.</li>
+                <li><strong>Check Results:</strong> Once voting ends, visit the Results section for updates.</li>
+                <li><strong>Admins:</strong> Authorized officials can access the admin panel for system management.</li>
+            </ol>
+        </div>
+
+        <!-- About Page / IIIDEM Info -->
+        <div class="about-page">
+            <div class="about-content">
+                <h3>India International Institute of Democracy and Election Management (IIIDEM)</h3>
+                <p>
+                    The Election Commission of India (ECI) established the India International Institute of Democracy
+                    and Election Management (IIIDEM)
+                    to advance its professional competence in election management, promote people's participation,
+                    contribute to developing stronger democratic institutions,
+                    and support the efforts of ECI in carrying out its mandate and functions.
+                </p>
+                <p>
+                    Over the last six decades, the structure and functions of the Election Commission have undergone
+                    major changes.
+                    The management of elections has become increasingly complex due to the rising number of political
+                    parties, changing dynamics of coalitions and alliances,
+                    frequent elections and bye-elections, increase in number of eligible voters, and continuous updating
+                    of electoral rolls.
+                    This has led to new challenges for election management bodies today.
+                </p>
+            </div>
+
+            <!-- Election Blocks -->
+            <div class="election-blocks">
+                <div class="election-block">
+                    <h4>Present Elections</h4>
+                    <ul>
+                        <li>Karnataka</li>
+                        <li>Bihar</li>
+                    </ul>
+                </div>
+                <div class="election-block">
+                    <h4>Past Elections</h4>
+                    <ul>
+                        <li>Uttar Pradesh</li>
+                        <li>Maharashtra</li>
+                    </ul>
+                </div>
+                <div class="election-block">
+                    <h4>Upcoming Elections</h4>
+                    <ul>
+                        <li>Rajasthan</li>
+                        <li>Tamil Nadu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voter Login -->
+    <section id="voterLogin" class="hidden">
+        <h2>Voter Login</h2>
+        <form id="voterLoginForm">
+            <input type="text" placeholder="Voter ID" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Admin Login -->
+    <section id="adminLogin" class="hidden">
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+            <input type="text" placeholder="Admin ID" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Registration -->
+    <section id="register" class="hidden">
+        <h2>Voter Registration</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Voter ID" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Voting Page -->
+    <section id="votingPage" class="hidden">
+        <h2>Cast Your Vote</h2>
+        <form id="voteForm">
+            <label><input type="radio" name="candidate" value="Candidate A" required> Candidate A</label><br>
+            <label><input type="radio" name="candidate" value="Candidate B"> Candidate B</label><br>
+            <label><input type="radio" name="candidate" value="Candidate C"> Candidate C</label><br>
+            <button type="submit">Submit Vote</button>
+        </form>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="hidden">
+        <h2>Election Results (Dummy Data)</h2>
+        <ul>
+            <li>Candidate A - 45%</li>
+            <li>Candidate B - 35%</li>
+            <li>Candidate C - 20%</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 State Election Commission</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
