@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>State Assembly Election Application</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo-container">
+      <img src="eci-logo.png" alt="Election Commission Logo" />
+      <h1>State Assembly Election</h1>
+    </div>
+
+    <nav>
+      <button type="button" onclick="logoutAndNavigate('login-section')">Login</button>
+      <button type="button" onclick="logoutAndNavigate('register-section')">Register</button>
+      <button type="button" id="adminBtn" onclick="logoutAndNavigate('admin-section')">Admin</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- VOTER LOGIN -->
+    <section id="login-section">
+      <h2>Voter Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginVoterId" placeholder="Voter ID" />
+        <p id="login-voterid-error" class="msg-error"></p>
+
+        <div class="password-wrapper">
+          <input type="password" id="loginPassword" placeholder="Password" />
+          <button type="button" class="toggle-btn" onclick="togglePassword('loginPassword', this)">
+            Show
+          </button>
+        </div>
+
+        <p id="login-password-error" class="msg-error"></p>
+
+        <button type="button" onclick="voterLogin()">Login</button>
+      </form>
+    </section>
+
+    <!-- REGISTER -->
+    <section id="register-section" class="hidden">
+      <h2>New Voter Registration</h2>
+      <form id="registerForm">
+        <input type="text" id="regName" placeholder="Full Name" />
+
+        <input type="text" id="regVoterId" placeholder="Voter ID" />
+        <p id="voterid-error" class="msg-error"></p>
+
+        <input type="text" id="regAadhar" placeholder="Aadhar Number" />
+        <p id="aadhar-error" class="msg-error"></p>
+
+        <div class="password-wrapper">
+          <input type="password" id="regPassword" placeholder="Create Password" />
+          <button type="button" class="toggle-btn" onclick="togglePassword('regPassword', this)">
+            Show
+          </button>
+        </div>
+
+
+        <button type="button" onclick="registerVoter()">Submit Registration</button>
+      </form>
+
+      <p id="register-message" class="msg-success"></p>
+    </section>
+
+    <!-- ADMIN -->
+    <section id="admin-section" class="hidden">
+      <h2>Admin Panel</h2>
+      <input type="text" id="adminUser" placeholder="Admin Username" />
+      <input type="password" id="adminPass" placeholder="Admin Password" />
+
+      <button type="button" onclick="adminLogin()">Login</button>
+
+      <p id="admin-error" class="msg-error"></p>
+
+      <div id="admin-panel" class="hidden">
+        <h3>Pending Voter Requests</h3>
+        <p id="no-requests" class="text-info hidden">No Requests currently</p>
+        <ul id="pending-list"></ul>
+
+        <button type="button" id="resultsBtn" class="hidden" onclick="showResults()">Results</button>
+      </div>
+    </section>
+
+
+    <!-- VOTING -->
+    <section id="vote-section" class="hidden">
+      <h2>Vote For Your Candidate</h2>
+      <ul id="candidate-list"></ul>
+    </section>
+
+    <!-- VOTE SUCCESS -->
+    <section id="vote-success-section" class="hidden vote-status">
+      <h2 class="msg-success">Vote Casted Successfully..!</h2>
+      <p class="text-info">Your Vote has been Recorded.</p>
+      <p class="thanks-yellow italic">Thanks for your Valuable Participation.</p>
+    </section>
+
+    <!-- ALREADY VOTED -->
+    <section id="already-voted-section" class="hidden vote-status">
+      <h2 class="msg-error">You have Already Casted Your Vote!</h2>
+      <p class="text-info">You are not allowed to Vote again.</p>
+      <p class="thanks-yellow italic">Thank You for Participating.</p>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results-section" class="hidden">
+      <h2 class="text-info">Results</h2>
+
+      <ul id="results-list"></ul>
+
+      <p id="leading-member" class="text-info"></p>
+
+      <button onclick="backToAdmin()">Back to Admin Panel</button>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    © 2025 Online Voting System. All rights reserved.
+  </footer>
+
+  <script src="candidates.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
