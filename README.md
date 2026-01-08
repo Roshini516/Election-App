@@ -198,4 +198,4 @@ Full-Stack Web Development Project
 
 * Final Note:-
 
-This project was developed step by step, preserving functionality during migration and focusing on clarity, correctness, and real-world practices rather than unnecessary complexity.
+This project was developed step by step, preserving functionality during migration and focusing on clarity, correctness, and real-world practices rather than unnecessary complexity..
